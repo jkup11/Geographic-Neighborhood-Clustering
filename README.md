@@ -7,6 +7,8 @@
 ##### Advisor: Dr. Pavlos Protopapas
 
 
+![FinalMap](final_model.png)
+
 
 This is the repository for Josh Kuppersmith's 2019 Senior Thesis in Applied Mathematics at Harvard University. 
 The broad goal of the thesis is to successfully cluster a grid representation of a city into data-driven neighborhoods.
