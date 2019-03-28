@@ -55,6 +55,7 @@ def sd(data, cluster_col):
         
     return sd_list
 
+# function to calculate EMD homogeneity between neighborhoods using crime distribution
 def emd(data, cluster_col):
     clusters = data[cluster_col]
     max_clust = np.max(list(clusters))
@@ -84,12 +85,14 @@ def emd(data, cluster_col):
 
     return cluster_emd_vecs
 
+# haversine distance helper function
 def hav_dist(lat1, lon1, lat2, lon2):
     lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
     # haversine formula 
     c = 2 * asin(sqrt(sin((lat2 - lat1) /2)**2 + cos(lat1) * cos(lat2) * sin((lon2 - lon1) /2)**2)) * 6371 # Radius of earth in kilometers
     return c
 
+# geographic k-means clustering using only latitude and longitude
 def pure_geo_k_means(data, k, cap=1000, verbose=False):
     # store error for iteration analysis
     s1 = time.time()
@@ -166,195 +169,7 @@ def pure_geo_k_means(data, k, cap=1000, verbose=False):
     
     return data[['Latitude', 'Longitude', 'CLUSTER_LABEL']], error_mags, sse
 
-def geo_k_means(data, k, alpha = 0.5, cap=1000, verbose=False):
-    # pass in data columns that you want to be used for analysis
-    # store error for iteration analysis
-    error_mags = []
-    sse = []
-    s1 = time.time()
-    
-    # initialize centroids
-    rand_inds = random.sample(range(0, len(data)), k)
-    arr = data.iloc[rand_inds]
-    centroids_curr = np.array(arr, dtype=np.float32)
-    
-    # centroid storage
-    centroids_old = np.zeros((k,2))
-    # cluster label
-    clusters = np.zeros(len(data))
-    ideal_error = list(np.zeros(k))
-    error = []
-    for i in range(k):
-        # lats and lons for haversine distance
-        error.append(hav_dist(centroids_old[i][0], centroids_old[i][1], centroids_curr[i][0], centroids_curr[i][1]))
-    itera = 0
-    while not error == ideal_error:
-        s2 = time.time()
-        itera += 1
-        
-        # stop early
-        if itera > cap:
-            break
-        
-        if verbose:
-            print("Iteration: " + str(itera))
-        for i in range(len(data)):
-            
-            distances = []
-            lat = data.at[i, 'Latitude']
-            lon = data.at[i, 'Longitude']
-            all_c = data.at[i, 'All Crime']
-            batt = data.at[i, 'Battery']
-            theft = data.at[i, 'Theft']
-            narc = data.at[i, 'Narcotics']
-            for j in range(len(centroids_curr)):
-                hav = hav_dist(centroids_curr[j][0], centroids_curr[j][1], lat, lon)
-                curr = np.array([all_c, batt, theft, narc])
-                cent = np.array([centroids_curr[j][2],centroids_curr[j][3],centroids_curr[j][4],centroids_curr[j][5]])
-                vec_dis = np.linalg.norm(curr-cent)
-                distances.append((1.0-alpha) * hav + (alpha) * vec_dis)
-            cluster_num = np.argmin(distances)
-            clusters[i] = cluster_num
-        # Store old centroid values
-        C_old_store = deepcopy(centroids_curr)
-        count_duds = 0
-        data.temp_clust = clusters
-
-        sse_iter = 0
-        for i in range(k):
-            points_in_clust = data[data.temp_clust == i][['Latitude','Longitude','All Crime','Battery','Theft','Narcotics']]
-            if len(points_in_clust) > 0:
-                centroids_curr[i] = np.mean(points_in_clust, axis=0)
-            else:
-                count_duds += 1
-                rand_ind = random.sample(range(0, len(data)), 1)
-                arr = data.iloc[rand_ind]
-                centroids_curr[i] = np.array(arr, dtype=np.float32)
-            mean = centroids_curr[i]
-            lat = mean[0]
-            lon = mean[1]
-            mean_feat = mean[2:]
-            
-            matrix = np.array(points_in_clust)
-            lats = matrix[:,0]
-            lons = matrix[:,1]
-            feats = matrix[:,2:]
-            
-            for j in range(len(matrix)):
-                sse_iter = sse_iter + (1.0-alpha)*hav_dist(lat, lon, lats[j], lons[j]) + alpha*np.linalg.norm(mean_feat-feats[j])
-        sse.append(sse_iter)
-        error = []
-        for i in range(k):
-            hav = hav_dist(C_old_store[i][0], C_old_store[i][1], centroids_curr[i][0], centroids_curr[i][1])
-            v1 = np.array([C_old_store[i][2], C_old_store[i][3], C_old_store[i][4], C_old_store[i][5]])
-            v2 = np.array([centroids_curr[i][2], centroids_curr[i][3], centroids_curr[i][4], centroids_curr[i][5]])
-            vec = np.linalg.norm(v1-v2)
-            error.append(10.0 * hav + 1.0 * vec)
-        er = np.linalg.norm(error)
-        if verbose:
-            print("Magnitude of error: " + str(er))
-            print("Iteration took: " + str(time.time()-s2))
-            print("Number of issues: " + str(count_duds))
-            print
-        error_mags.append(er)
-    print("Done, Successful Convergence. Total Time: " + str(time.time() - s1))
-    data['CLUSTER_LABEL'] = clusters
-    return data, error_mags, sse
-
-def geo_k_means_pca_3(data, k, alpha = 0.5, cap=1000, verbose=False):
-    # pass in data columns that you want to be used for analysis
-    # store error for iteration analysis
-    error_mags = []
-    sse = []
-    s1 = time.time()
-    
-    # initialize centroids
-    rand_inds = random.sample(range(0, len(data)), k)
-    arr = data.iloc[rand_inds]
-    centroids_curr = np.array(arr, dtype=np.float32)
-    
-    # centroid storage
-    centroids_old = np.zeros((k,2))
-    # cluster label
-    clusters = np.zeros(len(data))
-    ideal_error = list(np.zeros(k))
-    error = []
-    for i in range(k):
-        # lats and lons for haversine distance
-        error.append(hav_dist(centroids_old[i][0], centroids_old[i][1], centroids_curr[i][0], centroids_curr[i][1]))
-    itera = 0
-    while not error == ideal_error:
-        s2 = time.time()
-        itera += 1
-        
-        # stop early
-        if itera > cap:
-            break
-        
-        if verbose:
-            print("Iteration: " + str(itera))
-        for i in range(len(data)):
-            
-            distances = []
-            lat = data.at[i, 'Latitude']
-            lon = data.at[i, 'Longitude']
-            pca_1 = data.at[i, 'PCA_1']
-            pca_2 = data.at[i, 'PCA_2']
-            pca_3 = data.at[i, 'PCA_3']
-            for j in range(len(centroids_curr)):
-                hav = hav_dist(centroids_curr[j][0], centroids_curr[j][1], lat, lon)
-                curr = np.array([pca_1, pca_2, pca_3])
-                cent = np.array([centroids_curr[j][2],centroids_curr[j][3],centroids_curr[j][4]])
-                vec_dis = np.linalg.norm(curr-cent)
-                distances.append((1.0-alpha) * hav + (alpha) * vec_dis)
-            cluster_num = np.argmin(distances)
-            clusters[i] = cluster_num
-        # Store old centroid values
-        C_old_store = deepcopy(centroids_curr)
-        count_duds = 0
-        data.temp_clust = clusters
-
-        sse_iter = 0
-        for i in range(k):
-            points_in_clust = data[data.temp_clust == i][['Latitude','Longitude','PCA_1','PCA_2','PCA_3']]
-            if len(points_in_clust) > 0:
-                centroids_curr[i] = np.mean(points_in_clust, axis=0)
-            else:
-                count_duds += 1
-                rand_ind = random.sample(range(0, len(data)), 1)
-                arr = data.iloc[rand_ind]
-                centroids_curr[i] = np.array(arr, dtype=np.float32)
-            mean = centroids_curr[i]
-            lat = mean[0]
-            lon = mean[1]
-            mean_feat = mean[2:]
-            
-            matrix = np.array(points_in_clust)
-            lats = matrix[:,0]
-            lons = matrix[:,1]
-            feats = matrix[:,2:]
-            
-            for j in range(len(matrix)):
-                sse_iter = sse_iter + (1.0-alpha)*hav_dist(lat, lon, lats[j], lons[j]) + alpha*np.linalg.norm(mean_feat-feats[j])
-        sse.append(sse_iter)
-        error = []
-        for i in range(k):
-            hav = hav_dist(C_old_store[i][0], C_old_store[i][1], centroids_curr[i][0], centroids_curr[i][1])
-            v1 = np.array([C_old_store[i][2], C_old_store[i][3], C_old_store[i][4]])
-            v2 = np.array([centroids_curr[i][2], centroids_curr[i][3], centroids_curr[i][4]])
-            vec = np.linalg.norm(v1-v2)
-            error.append(10.0 * hav + 1.0 * vec)
-        er = np.linalg.norm(error)
-        if verbose:
-            print("Magnitude of error: " + str(er))
-            print("Iteration took: " + str(time.time()-s2))
-            print("Number of issues: " + str(count_duds))
-            print
-        error_mags.append(er)
-    print("Done, Successful Convergence. Total Time: " + str(time.time() - s1))
-    data['CLUSTER_LABEL'] = clusters
-    return data, error_mags, sse
-
+# geographic k means clustering using lat, lon, and first 2 components of PCA
 def geo_k_means_pca_2(data, k, alpha = 0.5, cap=1000, verbose=False):
     # pass in data columns that you want to be used for analysis
     # store error for iteration analysis
@@ -448,98 +263,7 @@ def geo_k_means_pca_2(data, k, alpha = 0.5, cap=1000, verbose=False):
     data['CLUSTER_LABEL'] = clusters
     return data, error_mags, sse
 
-def geo_k_means_pca_1(data, k, alpha = 0.5, cap=1000, verbose=False):
-    # pass in data columns that you want to be used for analysis
-    # store error for iteration analysis
-    error_mags = []
-    sse = []
-    s1 = time.time()
-    
-    # initialize centroids
-    rand_inds = random.sample(range(0, len(data)), k)
-    arr = data.iloc[rand_inds]
-    centroids_curr = np.array(arr, dtype=np.float32)
-    
-    # centroid storage
-    centroids_old = np.zeros((k,2))
-    # cluster label
-    clusters = np.zeros(len(data))
-    ideal_error = list(np.zeros(k))
-    error = []
-    for i in range(k):
-        # lats and lons for haversine distance
-        error.append(hav_dist(centroids_old[i][0], centroids_old[i][1], centroids_curr[i][0], centroids_curr[i][1]))
-    itera = 0
-    while not error == ideal_error:
-        s2 = time.time()
-        itera += 1
-        
-        # stop early
-        if itera > cap:
-            break
-        
-        if verbose:
-            print("Iteration: " + str(itera))
-        for i in range(len(data)):
-            
-            distances = []
-            lat = data.at[i, 'Latitude']
-            lon = data.at[i, 'Longitude']
-            pca_1 = data.at[i, 'PCA_1']
-            for j in range(len(centroids_curr)):
-                hav = hav_dist(centroids_curr[j][0], centroids_curr[j][1], lat, lon)
-                curr = np.array([pca_1])
-                cent = np.array([centroids_curr[j][2]])
-                vec_dis = np.linalg.norm(curr-cent)
-                distances.append((1.0-alpha) * hav + (alpha) * vec_dis)
-            cluster_num = np.argmin(distances)
-            clusters[i] = cluster_num
-        # Store old centroid values
-        C_old_store = deepcopy(centroids_curr)
-        count_duds = 0
-        data.temp_clust = clusters
-
-        sse_iter = 0
-        for i in range(k):
-            points_in_clust = data[data.temp_clust == i][['Latitude','Longitude','PCA_1']]
-            if len(points_in_clust) > 0:
-                centroids_curr[i] = np.mean(points_in_clust, axis=0)
-            else:
-                count_duds += 1
-                rand_ind = random.sample(range(0, len(data)), 1)
-                arr = data.iloc[rand_ind]
-                centroids_curr[i] = np.array(arr, dtype=np.float32)
-            mean = centroids_curr[i]
-            lat = mean[0]
-            lon = mean[1]
-            mean_feat = mean[2:]
-            
-            matrix = np.array(points_in_clust)
-            lats = matrix[:,0]
-            lons = matrix[:,1]
-            feats = matrix[:,2:]
-            
-            for j in range(len(matrix)):
-                sse_iter = sse_iter + (1.0-alpha)*hav_dist(lat, lon, lats[j], lons[j]) + alpha*np.linalg.norm(mean_feat-feats[j])
-        sse.append(sse_iter)
-        error = []
-        for i in range(k):
-            hav = hav_dist(C_old_store[i][0], C_old_store[i][1], centroids_curr[i][0], centroids_curr[i][1])
-            v1 = np.array([C_old_store[i][2]])
-            v2 = np.array([centroids_curr[i][2]])
-            vec = np.linalg.norm(v1-v2)
-            error.append(10.0 * hav + 1.0 * vec)
-        er = np.linalg.norm(error)
-        if verbose:
-            print("Magnitude of error: " + str(er))
-            print("Iteration took: " + str(time.time()-s2))
-            print("Number of issues: " + str(count_duds))
-            print
-        error_mags.append(er)
-    print("Done, Successful Convergence. Total Time: " + str(time.time() - s1))
-    data['CLUSTER_LABEL'] = clusters
-    return data, error_mags, sse
-
+# regularization term to help optimize cluster boundary smoothness
 def regularize(data, cluster_col):
     
     s = time.time()
@@ -603,6 +327,7 @@ def regularize(data, cluster_col):
         
     return total_reg_penalty
 
+# silhouette method for evaluating optimal number of clusters (NOT IN USE)
 def silhouette(data, cluster_col, n_clusters):
     cols = ['Latitude', 'Longitude', 'All Crime', 'Battery', 'Assault', 'Theft']
     X = data[cols]
@@ -635,6 +360,7 @@ def silhouette(data, cluster_col, n_clusters):
     
     return silhouette_avg
 
+# choose optimal k value for a given alpha (NOT IN USE)
 def optimal_k_run(alpha):
     k_list = [80, 85, 90, 95, 100, 105, 110, 115, 120]
 
@@ -684,31 +410,37 @@ def optimal_k_run(alpha):
     axs[1].set_title("Silhouette Method for Optimal K")
     plt.show()
 
-# EVALUATE MODEL
+# EVALUATE MODEL with map and metrics
 def evaluate_model(data, clustering_label, save_label, error_mags, sse):
-	sns.lmplot(x="Longitude", y="Latitude", data=data, fit_reg=False, hue=clustering_label, legend=False, scatter_kws={"s": 80}, size=10)
-	plt.show()
+    sns.lmplot(x="Longitude", y="Latitude", data=data, fit_reg=False, hue=clustering_label, legend=False, scatter_kws={"s": 80}, size=10)
+    plt.xlabel('')
+    plt.ylabel('')
+    plt.xticks([])
+    plt.yticks([])
+    plt.show()
 
-	clustering_grid[save_label] = [int(i) for i in list(data[clustering_label])]
-	all_c_emd = emd(clustering_grid, save_label)
-	all_c_sd = sd(clustering_grid, save_label)
-	print("The average Simple Cluster all crime EMD is: " + str(np.mean(all_c_emd)) + ", the median is: " + str(np.median(all_c_emd)) + ", the maximum is: " + str(np.max(all_c_emd)) + ", and the minimum is: " + str(np.min(all_c_emd)))
-	print
-	print('-----------------------------------------------------')
-	print
-	print("The average Simple Cluster all crime Standard Deviation is: " + str(np.mean(all_c_sd)) + ", the median is: " + str(np.median(all_c_sd)) + ", the maximum is: " + str(np.max(all_c_sd)) + ", and the minimum is: " + str(np.min(all_c_sd)))
-	print
-	fig, axs = plt.subplots(1,2, figsize=(12,6))
-	axs[0].plot(range(len(error_mags)), error_mags)
-	axs[0].set_xlabel('Iteration Number')
-	axs[0].set_ylabel('Magnitude of Iteration Error Vector')
-	axs[0].set_title('Convergence Analysis (Using Movement of Centroids)')
-	axs[1].plot(range(len(sse)), sse)
-	axs[1].set_xlabel('Iteration Number')
-	axs[1].set_ylabel('Magnitude of Iteration SSE')
-	axs[1].set_title('Convergence Analysis (SSE, Should Decrease)')
-	plt.show()
+    clustering_grid[save_label] = [int(i) for i in list(data[clustering_label])]
+    all_c_emd = emd(clustering_grid, save_label)
+    all_c_sd = sd(clustering_grid, save_label)
+    print("The average Simple Cluster all crime EMD is: " + str(np.mean(all_c_emd)) + ", the median is: " + str(np.median(all_c_emd)) + ", the maximum is: " + str(np.max(all_c_emd)) + ", and the minimum is: " + str(np.min(all_c_emd)))
+    print
+    print('-----------------------------------------------------')
+    print
+    print("The average Simple Cluster all crime Standard Deviation is: " + str(np.mean(all_c_sd)) + ", the median is: " + str(np.median(all_c_sd)) + ", the maximum is: " + str(np.max(all_c_sd)) + ", and the minimum is: " + str(np.min(all_c_sd)))
+    print
+    fig, axs = plt.subplots(1,2, figsize=(12,6))
+    axs[0].plot(range(len(error_mags)), error_mags)
+    axs[0].set_xlabel('Iteration Number')
+    axs[0].set_ylabel('Magnitude of Iteration Error Vector')
+    axs[0].set_title('Convergence Analysis (Using Movement of Centroids)')
+    axs[1].plot(range(len(sse)), sse)
+    axs[1].set_xlabel('Iteration Number')
+    axs[1].set_ylabel('Magnitude of Iteration SSE')
+    axs[1].set_title('Convergence Analysis (SSE, Should Decrease)')
+    plt.show()
 
+# improving initial centroid initialization to use neighborhood centers
+# geographic k-means clustering using lat, lon, and first 2 components of PCA
 def geo_k_means_97_pca_2(c_g, data, k, alpha=0.5, verbose=False):
 
     cap=1000
@@ -826,6 +558,8 @@ def geo_k_means_97_pca_2(c_g, data, k, alpha=0.5, verbose=False):
     data['CLUSTER_LABEL'] = clusters
     return data, error_mags, sse
 
+# improving initial centroid initialization to use evenly spaced points from k-means run
+# geographic k-means clustering using lat, lon, and first 2 components of PCA
 def geo_k_means_95_pca_2(c_g, data, alpha=0.5, k=96, verbose=False):
 
     cap=1000
@@ -959,4 +693,153 @@ def geo_k_means_95_pca_2(c_g, data, alpha=0.5, k=96, verbose=False):
     print("Done, Successful Convergence. Total Time: " + str(time.time() - s1))
     data['CLUSTER_LABEL'] = clusters
     return data, error_mags, sse
+
+# geographic k-means with initial centroid noise for sensitivity analysis
+def geo_k_means_sensitive(c_g, data, alpha=0.5, k=96, verbose=False):
+
+    cap=1000
+
+    # pass in data columns that you want to be used for analysis
+    # store error for iteration analysis
+    error_mags = []
+    sse = []
+    s1 = time.time()
+    
+    # initialize centroids
+    X = c_g[["lat", "lon"]]
+    kmeans = KMeans(n_clusters=k)
+    kmeans.fit(X)
+    y_km = kmeans.fit_predict(X)
+    c_g['Temp_Cluster'] = y_km
+
+    lats = []
+    lons = []
+
+    max_neigh = np.max(list(c_g.Temp_Cluster))
+    for neigh in range(max_neigh+1):
+        data_neigh = c_g[c_g.Temp_Cluster == neigh]
+        if len(data_neigh) > 0:
+            lats.append(np.mean(list(data_neigh.Latitude)))
+            lons.append(np.mean(list(data_neigh.Longitude)))
+    k = len(lats)
+    
+    # initialize centroids based on these points
+    centroids_indices = []
+    for i in range(len(lats)):
+        lat = lats[i]
+        lon = lons[i]
+        distances = []
+        for index, row in c_g.iterrows():
+            point_lat = row.Latitude
+            point_lon = row.Longitude
+            distances.append(hav_dist(lat, lon, point_lat, point_lon))
+        min_ind = np.argmin(distances)
+        centroids_indices.append(min_ind)
+    
+    arr = data.iloc[centroids_indices][['Latitude', 'Longitude', 'PCA_1', 'PCA_2']]
+    centroids_curr = np.array(arr, dtype=np.float32)
+    
+    lat_sq_var = math.sqrt(np.var(list(data.Latitude)))
+    lon_sq_var = math.sqrt(np.var(list(data.Longitude)))
+    pc1_sq_var = math.sqrt(np.var(list(data.PCA_1)))
+    pc2_sq_var = math.sqrt(np.var(list(data.PCA_2)))
+    
+    # add noise
+    for i in range(len(centroids_curr)):
+        centroids_curr[i][0] = centroids_curr[i][0] + random.uniform(-1.0*lat_sq_var/2.0,lat_sq_var/2.0)
+        centroids_curr[i][1] = centroids_curr[i][1] + random.uniform(-1.0*lon_sq_var/2.0,lon_sq_var/2.0)
+        centroids_curr[i][2] = centroids_curr[i][2] + random.uniform(-1.0*pc1_sq_var/2.0,pc1_sq_var/2.0)
+        centroids_curr[i][3] = centroids_curr[i][3] + random.uniform(-1.0*pc2_sq_var/2.0,pc2_sq_var/2.0)
+    print(centroids_curr)
+    
+    #lats = list(arr.Latitude)
+    #lons = list(arr.Longitude)
+
+    #plt.scatter(lons, lats, s=10)
+    #plt.title("Centroids Corresponding to Center of Chicago's 97 Neighborhoods")
+    #plt.show()
+    
+    # centroid storage
+    centroids_old = np.zeros((k,2))
+    # cluster label
+    clusters = np.zeros(len(data))
+    ideal_error = list(np.zeros(k))
+    error = []
+    for i in range(k):
+        # lats and lons for haversine distance
+        error.append(hav_dist(centroids_old[i][0], centroids_old[i][1], centroids_curr[i][0], centroids_curr[i][1]))
+    itera = 0
+    while not error == ideal_error:
+        s2 = time.time()
+        itera += 1
+        
+        # stop early
+        if itera > cap:
+            break
+        
+        if verbose:
+            print("Iteration: " + str(itera))
+        for i in range(len(data)):
+            
+            distances = []
+            lat = data.at[i, 'Latitude']
+            lon = data.at[i, 'Longitude']
+            pca_1 = data.at[i, 'PCA_1']
+            pca_2 = data.at[i, 'PCA_2']
+            for j in range(len(centroids_curr)):
+                hav = hav_dist(centroids_curr[j][0], centroids_curr[j][1], lat, lon)
+                curr = np.array([pca_1, pca_2])
+                cent = np.array([centroids_curr[j][2],centroids_curr[j][3]])
+                vec_dis = np.linalg.norm(curr-cent)
+                distances.append((1.0-alpha) * hav + (alpha) * vec_dis)
+            cluster_num = np.argmin(distances)
+            clusters[i] = cluster_num
+        # Store old centroid values
+        C_old_store = deepcopy(centroids_curr)
+        count_duds = 0
+        data.temp_clust = clusters
+
+        sse_iter = 0
+        for i in range(k):
+            points_in_clust = data[data.temp_clust == i][['Latitude','Longitude','PCA_1','PCA_2']]
+            if len(points_in_clust) > 0:
+                centroids_curr[i] = np.mean(points_in_clust, axis=0)
+            else:
+                count_duds += 1
+                rand_ind = random.sample(range(0, len(data)), 1)
+                arr = data.iloc[rand_ind]
+                centroids_curr[i] = np.array(arr, dtype=np.float32)
+                print("")
+            mean = centroids_curr[i]
+            lat = mean[0]
+            lon = mean[1]
+            mean_feat = mean[2:]
+            
+            matrix = np.array(points_in_clust)
+            lats = matrix[:,0]
+            lons = matrix[:,1]
+            feats = matrix[:,2:]
+            
+            for j in range(len(matrix)):
+                sse_iter = sse_iter + (1.0-alpha)*hav_dist(lat, lon, lats[j], lons[j]) + alpha*np.linalg.norm(mean_feat-feats[j])
+        sse.append(sse_iter)
+        error = []
+        for i in range(k):
+            hav = hav_dist(C_old_store[i][0], C_old_store[i][1], centroids_curr[i][0], centroids_curr[i][1])
+            v1 = np.array([C_old_store[i][2], C_old_store[i][3]])
+            v2 = np.array([centroids_curr[i][2], centroids_curr[i][3]])
+            vec = np.linalg.norm(v1-v2)
+            error.append(10.0 * hav + 1.0 * vec)
+        er = np.linalg.norm(error)
+        if verbose:
+            print("Magnitude of error: " + str(er))
+            print("Iteration took: " + str(time.time()-s2))
+            print("Number of issues: " + str(count_duds))
+            print
+        error_mags.append(er)
+    print("Done, Successful Convergence. Total Time: " + str(time.time() - s1))
+    data['CLUSTER_LABEL'] = clusters
+    return data, error_mags, sse
+
+
 
