@@ -7,7 +7,7 @@
 ##### Advisor: Dr. Pavlos Protopapas
 
 
-![FinalMap](../final_model.png)
+![FinalMap](https://raw.githubusercontent.com/jkup11/Geographic-Neighborhood-Clustering/master/final_map.png)
 
 
 This is the repository for Josh Kuppersmith's 2019 Senior Thesis in Applied Mathematics at Harvard University. 
