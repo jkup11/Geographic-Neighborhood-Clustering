@@ -1,0 +1,301 @@
+,STOP_ID,STOP_NAME,STATION_NAME,MAP_ID,ADA,RED,BLUE,G,BRN,P,Pexp,Y,Pnk,O,Location,Latitude,Longitude
+0,30161,18th (Loop-bound),18th,40830,True,False,False,False,False,False,False,False,True,False,"(41.857908, -87.669147)",41.857908,-87.669147
+1,30162,18th (54th/Cermak-bound),18th,40830,True,False,False,False,False,False,False,False,True,False,"(41.857908, -87.669147)",41.857908,-87.669147
+2,30022,35th/Archer (Loop-bound),35th/Archer,40120,True,False,False,False,False,False,False,False,False,True,"(41.829353, -87.680622)",41.829353,-87.680622
+3,30023,35th/Archer (Midway-bound),35th/Archer,40120,True,False,False,False,False,False,False,False,False,True,"(41.829353, -87.680622)",41.829353,-87.680622
+4,30213,35-Bronzeville-IIT (Harlem-bound),35th-Bronzeville-IIT,41120,True,False,False,True,False,False,False,False,False,False,"(41.831677, -87.625826)",41.831677,-87.625826
+5,30214,35-Bronzeville-IIT (63rd-bound),35th-Bronzeville-IIT,41120,True,False,False,True,False,False,False,False,False,False,"(41.831677, -87.625826)",41.831677,-87.625826
+6,30245,43rd (Harlem-bound),43rd,41270,True,False,False,True,False,False,False,False,False,False,"(41.816462, -87.619021)",41.816462,-87.619021
+7,30246,43rd (63rd-bound),43rd,41270,True,False,False,True,False,False,False,False,False,False,"(41.816462, -87.619021)",41.816462,-87.619021
+8,30210,47th (63rd-bound),47th,41080,True,False,False,True,False,False,False,False,False,False,"(41.809209, -87.618826)",41.809209,-87.618826
+9,30237,47th (Howard-bound),47th,41230,True,True,False,False,False,False,False,False,False,False,"(41.810318, -87.63094)",41.810318,-87.63094
+10,30209,47th (Harlem-bound),47th,41080,True,False,False,True,False,False,False,False,False,False,"(41.809209, -87.618826)",41.809209,-87.618826
+11,30238,47th (95th-bound),47th,41230,True,True,False,False,False,False,False,False,False,False,"(41.810318, -87.63094)",41.810318,-87.63094
+12,30024,51st (Harlem-bound),51st,40130,True,False,False,True,False,False,False,False,False,False,"(41.80209, -87.618487)",41.80209,-87.618487
+13,30025,51st (63rd-bound),51st,40130,True,False,False,True,False,False,False,False,False,False,"(41.80209, -87.618487)",41.80209,-87.618487
+14,30113,54th/Cermak (Loop-bound),54th/Cermak,40580,True,False,False,False,False,False,False,False,True,False,"(41.85177331, -87.75669201)",41.85177331,-87.75669201
+15,30114,54th/Cermak (Terminal arrival),54th/Cermak,40580,True,False,False,False,False,False,False,False,True,False,"(41.85177331, -87.75669201)",41.85177331,-87.75669201
+16,30177,63rd (Howard-bound),63rd,40910,True,True,False,False,False,False,False,False,False,False,"(41.780536, -87.630952)",41.780536,-87.630952
+17,30178,63rd (95th-bound),63rd,40910,True,True,False,False,False,False,False,False,False,False,"(41.780536, -87.630952)",41.780536,-87.630952
+18,30191,69th (Howard-bound),69th,40990,True,True,False,False,False,False,False,False,False,False,"(41.768367, -87.625724)",41.768367,-87.625724
+19,30192,69th (95th-bound),69th,40990,True,True,False,False,False,False,False,False,False,False,"(41.768367, -87.625724)",41.768367,-87.625724
+20,30046,79th (Howard-bound),79th,40240,True,True,False,False,False,False,False,False,False,False,"(41.750419, -87.625112)",41.750419,-87.625112
+21,30047,79th (95th-bound),79th,40240,True,True,False,False,False,False,False,False,False,False,"(41.750419, -87.625112)",41.750419,-87.625112
+22,30275,87th (Howard-bound),87th,41430,True,True,False,False,False,False,False,False,False,False,"(41.735372, -87.624717)",41.735372,-87.624717
+23,30276,87th (95th-bound),87th,41430,True,True,False,False,False,False,False,False,False,False,"(41.735372, -87.624717)",41.735372,-87.624717
+24,30089,95th/Dan Ryan (95th-bound),95th/Dan Ryan,40450,True,True,False,False,False,False,False,False,False,False,"(41.722377, -87.624342)",41.722377,-87.624342
+25,30088,95th/Dan Ryan (Howard-bound),95th/Ran Ryan,40450,True,True,False,False,False,False,False,False,False,False,"(41.722377, -87.624342)",41.722377,-87.624342
+26,30132,Adams/Wabash (Inner Loop),Adams/Wabash,40680,False,False,False,True,False,False,True,False,True,True,"(41.879507, -87.626037)",41.879507,-87.626037
+27,30131,Adams/Wabash (Outer Loop),Adams/Wabash,40680,False,False,False,True,True,False,False,False,False,False,"(41.879507, -87.626037)",41.879507,-87.626037
+28,30240,Addison (Forest Pk-bound),Addison,41240,True,False,True,False,False,False,False,False,False,False,"(41.94738, -87.71906)",41.94738,-87.71906
+29,30277,Addison (Kimball-bound),Addison,41440,True,False,False,False,True,False,False,False,False,False,"(41.947028, -87.674642)",41.947028,-87.674642
+30,30274,Addison (95th-bound),Addison,41420,True,True,False,False,False,False,False,False,False,False,"(41.947428, -87.653626)",41.947428,-87.653626
+31,30278,Addison (Loop-bound),Addison,41440,True,False,False,False,True,False,False,False,False,False,"(41.947028, -87.674642)",41.947028,-87.674642
+32,30273,Addison (Howard-bound),Addison,41420,True,True,False,False,False,False,False,False,False,False,"(41.947428, -87.653626)",41.947428,-87.653626
+33,30239,Addison (O'Hare-bound),Addison,41240,True,False,True,False,False,False,False,False,False,False,"(41.94738, -87.71906)",41.94738,-87.71906
+34,30229,Argyle (Howard-bound),Argyle,41200,False,True,False,False,False,False,False,False,False,False,"(41.973453, -87.65853)",41.973453,-87.65853
+35,30230,Argyle (95th-bound),Argyle,41200,False,True,False,False,False,False,False,False,False,False,"(41.973453, -87.65853)",41.973453,-87.65853
+36,30128,Armitage (Loop-bound),Armitage,40660,True,False,False,False,True,False,True,False,False,False,"(41.918217, -87.652644)",41.918217,-87.652644
+37,30127,Armitage (Kimball-Linden-bound),Armitage,40660,True,False,False,False,True,False,True,False,False,False,"(41.918217, -87.652644)",41.918217,-87.652644
+38,30205,Ashland (Loop-bound),Ashland,41060,True,False,False,False,False,False,False,False,False,True,"(41.839234, -87.665317)",41.839234,-87.665317
+39,30206,Ashland (Midway-bound),Ashland,41060,True,False,False,False,False,False,False,False,False,True,"(41.839234, -87.665317)",41.839234,-87.665317
+40,30057,Ashland/63rd (Terminal arrival),Ashland/63rd,40290,True,False,False,True,False,False,False,False,False,False,"(41.77886, -87.663766)",41.77886,-87.663766
+41,30056,Ashland/63rd (Harlem-bound),Ashland/63rd,40290,True,False,False,True,False,False,False,False,False,False,"(41.77886, -87.663766)",41.77886,-87.663766
+42,30001,Austin (O'Hare-bound),Austin,40010,False,False,True,False,False,False,False,False,False,False,"(41.870851, -87.776812)",41.870851,-87.776812
+43,30002,Austin (Forest Pk-bound),Austin,40010,False,False,True,False,False,False,False,False,False,False,"(41.870851, -87.776812)",41.870851,-87.776812
+44,30243,Austin (63rd-bound),Austin,41260,False,False,False,True,False,False,False,False,False,False,"(41.887293, -87.774135)",41.887293,-87.774135
+45,30244,Austin (Harlem-bound),Austin,41260,False,False,False,True,False,False,False,False,False,False,"(41.887293, -87.774135)",41.887293,-87.774135
+46,30258,Belmont (Loop-bound),Belmont,41320,True,False,False,False,True,False,True,False,False,False,"(41.939751, -87.65338)",41.939751,-87.65338
+47,30013,Belmont (O'Hare Branch) (Forest Pk-bound),Belmont,40060,False,False,True,False,False,False,False,False,False,False,"(41.938132, -87.712359)",41.938132,-87.712359
+48,30012,Belmont (O'Hare Branch) (O'Hare-bound),Belmont,40060,False,False,True,False,False,False,False,False,False,False,"(41.938132, -87.712359)",41.938132,-87.712359
+49,30256,Belmont (95th-bound),Belmont,41320,True,True,False,False,False,False,False,False,False,False,"(41.939751, -87.65338)",41.939751,-87.65338
+50,30255,Belmont (Howard-bound),Belmont,41320,True,True,False,False,False,False,False,False,False,False,"(41.939751, -87.65338)",41.939751,-87.65338
+51,30257,Belmont (Kimball-Linden-bound),Belmont,41320,True,False,False,False,True,False,True,False,False,False,"(41.939751, -87.65338)",41.939751,-87.65338
+52,30067,Berwyn (95th-bound),Berwyn,40340,False,True,False,False,False,False,False,False,False,False,"(41.977984, -87.658668)",41.977984,-87.658668
+53,30066,Berwyn (Howard-bound),Berwyn,40340,False,True,False,False,False,False,False,False,False,False,"(41.977984, -87.658668)",41.977984,-87.658668
+54,30267,Bryn Mawr (Howard-bound),Bryn Mawr,41380,False,True,False,False,False,False,False,False,False,False,"(41.983504, -87.65884)",41.983504,-87.65884
+55,30268,Bryn Mawr (95th-bound),Bryn Mawr,41380,False,True,False,False,False,False,False,False,False,False,"(41.983504, -87.65884)",41.983504,-87.65884
+56,30086,California (Loop-bound),California,40440,True,False,False,False,False,False,False,False,True,False,"(41.854109, -87.694774)",41.854109,-87.694774
+57,30087,California (54th/Cermak-bound),California,40440,True,False,False,False,False,False,False,False,True,False,"(41.854109, -87.694774)",41.854109,-87.694774
+58,30111,California (O'Hare-bound),California,40570,False,False,True,False,False,False,False,False,False,False,"(41.921939, -87.69689)",41.921939,-87.69689
+59,30112,California (Forest Pk-bound),California,40570,False,False,True,False,False,False,False,False,False,False,"(41.921939, -87.69689)",41.921939,-87.69689
+60,30266,California (Harlem-bound),California,41360,True,False,False,True,False,False,False,False,False,False,"(41.88422, -87.696234)",41.88422,-87.696234
+61,30265,California (63rd-bound),California,41360,True,False,False,True,False,False,False,False,False,False,"(41.88422, -87.696234)",41.88422,-87.696234
+62,30242,Central (Howard-Loop-bound),Central,41250,False,False,False,False,False,True,True,False,False,False,"(42.063987, -87.685617)",42.063987,-87.685617
+63,30241,Central (Linden-bound),Central,41250,False,False,False,False,False,True,True,False,False,False,"(42.063987, -87.685617)",42.063987,-87.685617
+64,30055,Central (Harlem-bound),Central,40280,True,False,False,True,False,False,False,False,False,False,"(41.887389, -87.76565)",41.887389,-87.76565
+65,30054,Central (63rd-bound),Central,40280,True,False,False,True,False,False,False,False,False,False,"(41.887389, -87.76565)",41.887389,-87.76565
+66,30151,Central Park (Loop-bound),Central Park,40780,True,False,False,False,False,False,False,False,True,False,"(41.853839, -87.714842)",41.853839,-87.714842
+67,30152,Central Park (54th/Cermak-bound),Central Park,40780,True,False,False,False,False,False,False,False,True,False,"(41.853839, -87.714842)",41.853839,-87.714842
+68,30194,Cermak-Chinatown (95th-bound),Cermak-Chinatown,41000,True,True,False,False,False,False,False,False,False,False,"(41.853206, -87.630968)",41.853206,-87.630968
+69,30193,Cermak-Chinatown (Howard-bound),Cermak-Chinatown,41000,True,True,False,False,False,False,False,False,False,False,"(41.853206, -87.630968)",41.853206,-87.630968
+70,30382,Cermak-McCormick Place (63rd-bound),Cermak-McCormick Place,41690,True,False,False,True,False,False,False,False,False,False,"(41.853115, -87.626402)",41.853115,-87.626402
+71,30032,Ashland (Loop-63rd-bound),Ashland,40170,True,False,False,True,False,False,False,False,True,False,"(41.885269, -87.666969)",41.885269,-87.666969
+72,30381,Cermak-McCormick Place (Harlem-bound),Cermak-McCormick Place,41690,True,False,False,True,False,False,False,False,False,False,"(41.853115, -87.626402)",41.853115,-87.626402
+73,30138,Chicago (Loop-bound),Chicago,40710,True,False,False,False,True,False,True,False,False,False,"(41.89681, -87.635924)",41.89681,-87.635924
+74,30271,Chicago (O'Hare-bound),Chicago,41410,False,False,True,False,False,False,False,False,False,False,"(41.896075, -87.655214)",41.896075,-87.655214
+75,30272,Chicago (Forest Pk-bound),Chicago,41410,False,False,True,False,False,False,False,False,False,False,"(41.896075, -87.655214)",41.896075,-87.655214
+76,30279,Chicago (Howard-bound),Chicago,41450,True,True,False,False,False,False,False,False,False,False,"(41.896671, -87.628176)",41.896671,-87.628176
+77,30280,Chicago (95th-bound),Chicago,41450,True,True,False,False,False,False,False,False,False,False,"(41.896671, -87.628176)",41.896671,-87.628176
+78,30137,Chicago (Kimball-Linden-bound),Chicago,40710,True,False,False,False,True,False,True,False,False,False,"(41.89681, -87.635924)",41.89681,-87.635924
+79,30187,Cicero (O'Hare-bound),Cicero,40970,False,False,True,False,False,False,False,False,False,False,"(41.871574, -87.745154)",41.871574,-87.745154
+80,30083,Cicero (54th/Cermak-bound),Cicero,40420,True,False,False,False,False,False,False,False,True,False,"(41.85182, -87.745336)",41.85182,-87.745336
+81,30082,Cicero (Loop-bound),Cicero,40420,True,False,False,False,False,False,False,False,True,False,"(41.85182, -87.745336)",41.85182,-87.745336
+82,30188,Cicero (Forest Pk-bound),Cicero,40970,False,False,True,False,False,False,False,False,False,False,"(41.871574, -87.745154)",41.871574,-87.745154
+83,30009,Cicero (Harlem-bound),Cicero,40480,True,False,False,True,False,False,False,False,False,False,"(41.886519, -87.744698)",41.886519,-87.744698
+84,30094,Cicero (63rd-bound),Cicero,40480,True,False,False,True,False,False,False,False,False,False,"(41.886519, -87.744698)",41.886519,-87.744698
+85,30122,Clark/Division (95th-bound),Clark/Division,40630,True,True,False,False,False,False,False,False,False,False,"(41.90392, -87.631412)",41.90392,-87.631412
+86,30121,Clark/Division (Howard-bound),Clark/Division,40630,True,True,False,False,False,False,False,False,False,False,"(41.90392, -87.631412)",41.90392,-87.631412
+87,30074,Clark/Lake (Inner Loop),Clark/Lake,40380,True,False,False,True,False,False,True,False,True,True,"(41.885737, -87.630886)",41.885737,-87.630886
+88,30075,Clark/Lake (Outer Loop),Clark/Lake,40380,True,False,False,True,True,False,False,False,False,False,"(41.885737, -87.630886)",41.885737,-87.630886
+89,30374,Clark/Lake (Forest Pk-bound),Clark/Lake,40380,True,False,True,False,False,False,False,False,False,False,"(41.885737, -87.630886)",41.885737,-87.630886
+90,30375,Clark/Lake (O'Hare-bound),Clark/Lake,40380,True,False,True,False,False,False,False,False,False,False,"(41.885737, -87.630886)",41.885737,-87.630886
+91,30222,Clinton (Harlem-54th/Cermak-bound),Clinton,41160,True,False,False,True,False,False,False,False,True,False,"(41.885678, -87.641782)",41.885678,-87.641782
+92,30221,Clinton (Loop-63rd-bound),Clinton,41160,True,False,False,True,False,False,False,False,True,False,"(41.885678, -87.641782)",41.885678,-87.641782
+93,30085,Clinton (Forest Pk-bound),Clinton,40430,False,False,True,False,False,False,False,False,False,False,"(41.875539, -87.640984)",41.875539,-87.640984
+94,30084,Clinton (O'Hare-bound),Clinton,40430,False,False,True,False,False,False,False,False,False,False,"(41.875539, -87.640984)",41.875539,-87.640984
+95,30291,Conservatory (63rd-bound),Conservatory,41670,True,False,False,True,False,False,False,False,False,False,"(41.884904, -87.716523)",41.884904,-87.716523
+96,30292,Conservatory (Harlem-bound),Conservatory,41670,True,False,False,True,False,False,False,False,False,False,"(41.884904, -87.716523)",41.884904,-87.716523
+97,30140,Cottage Grove (Harlem-bound),Cottage Grove,40720,True,False,False,True,False,False,False,False,False,False,"(41.780309, -87.605857)",41.780309,-87.605857
+98,30139,Cottage Grove (Terminal arrival),Cottage Grove,40720,True,False,False,True,False,False,False,False,False,False,"(41.780309, -87.605857)",41.780309,-87.605857
+99,30044,Cumberland (O'Hare-bound),Cumberland,40230,True,False,True,False,False,False,False,False,False,False,"(41.984246, -87.838028)",41.984246,-87.838028
+100,30045,Cumberland (Forest Pk-bound),Cumberland,40230,True,False,True,False,False,False,False,False,False,False,"(41.984246, -87.838028)",41.984246,-87.838028
+101,30019,Damen (Loop-bound),Damen,40090,True,False,False,False,True,False,False,False,False,False,"(41.966286, -87.678639)",41.966286,-87.678639
+102,30041,Damen (54th/Cermak-bound),Damen,40210,True,False,False,False,False,False,False,False,True,False,"(41.854517, -87.675975)",41.854517,-87.675975
+103,30040,Damen (Loop-bound),Damen,40210,True,False,False,False,False,False,False,False,True,False,"(41.854517, -87.675975)",41.854517,-87.675975
+104,30116,Damen/Milwaukee (Forest Pk-bound),Damen,40590,False,False,True,False,False,False,False,False,False,False,"(41.909744, -87.677437)",41.909744,-87.677437
+105,30115,Damen/Milwaukee (O'Hare-bound),Damen,40590,False,False,True,False,False,False,False,False,False,False,"(41.909744, -87.677437)",41.909744,-87.677437
+106,30018,Damen (Kimball-bound),Damen,40090,True,False,False,False,True,False,False,False,False,False,"(41.966286, -87.678639)",41.966286,-87.678639
+107,30010,Davis (Linden-bound),Davis,40050,True,False,False,False,False,True,True,False,False,False,"(42.04771, -87.683543)",42.04771,-87.683543
+108,30011,Davis (Howard-Loop-bound),Davis,40050,True,False,False,False,False,True,True,False,False,False,"(42.04771, -87.683543)",42.04771,-87.683543
+109,30133,Dempster (Linden-bound),Dempster,40690,False,False,False,False,False,True,True,False,False,False,"(42.041655, -87.681602)",42.041655,-87.681602
+110,30134,Dempster (Howard-Loop-bound),Dempster,40690,False,False,False,False,False,True,True,False,False,False,"(42.041655, -87.681602)",42.041655,-87.681602
+111,30026,Dempster-Skokie (Arrival),Dempster-Skokie,40140,True,False,False,False,False,False,False,True,False,False,"(42.038951, -87.751919)",42.038951,-87.751919
+112,30027,Dempster-Skokie (Howard-bound),Dempster-Skokie,40140,True,False,False,False,False,False,False,True,False,False,"(42.038951, -87.751919)",42.038951,-87.751919
+113,30103,Diversey (Kimball-Linden-bound),Diversey,40530,True,False,False,False,True,False,True,False,False,False,"(41.932732, -87.653131)",41.932732,-87.653131
+114,30104,Diversey (Loop-bound),Diversey,40530,True,False,False,False,True,False,True,False,False,False,"(41.932732, -87.653131)",41.932732,-87.653131
+115,30062,Division (O'Hare-bound),Division,40320,False,False,True,False,False,False,False,False,False,False,"(41.903355, -87.666496)",41.903355,-87.666496
+116,30063,Division (Forest Pk-bound),Division,40320,False,False,True,False,False,False,False,False,False,False,"(41.903355, -87.666496)",41.903355,-87.666496
+117,30077,Forest Park (Terminal Arrival),Forest Park,40390,True,False,True,False,False,False,False,False,False,False,"(41.874257, -87.817318)",41.874257,-87.817318
+118,30076,Forest Park (O'Hare-bound),Forest Park,40390,True,False,True,False,False,False,False,False,False,False,"(41.874257, -87.817318)",41.874257,-87.817318
+119,30101,Foster (Linden-bound),Foster,40520,False,False,False,False,False,True,True,False,False,False,"(42.05416, -87.68356)",42.05416,-87.68356
+120,30102,Foster (Howard-Loop-bound),Foster,40520,False,False,False,False,False,True,True,False,False,False,"(42.05416, -87.68356)",42.05416,-87.68356
+121,30168,Francisco (Loop-bound),Francisco,40870,True,False,False,False,True,False,False,False,False,False,"(41.966046, -87.701644)",41.966046,-87.701644
+122,30167,Francisco (Kimball-bound),Francisco,40870,True,False,False,False,True,False,False,False,False,False,"(41.966046, -87.701644)",41.966046,-87.701644
+123,30234,Fullerton (95th-bound),Fullerton,41220,True,True,False,False,False,False,False,False,False,False,"(41.925051, -87.652866)",41.925051,-87.652866
+124,30236,Fullerton (Loop-bound),Fullerton,41220,True,False,False,False,True,False,True,False,False,False,"(41.925051, -87.652866)",41.925051,-87.652866
+125,30235,Fullerton (Kimball-Linden-bound),Fullerton,41220,True,False,False,False,True,False,True,False,False,False,"(41.925051, -87.652866)",41.925051,-87.652866
+126,30233,Fullerton (Howard-bound),Fullerton,41220,True,True,False,False,False,False,False,False,False,False,"(41.925051, -87.652866)",41.925051,-87.652866
+127,30100,Garfield (63rd-bound),Garfield,40510,True,False,False,True,False,False,False,False,False,False,"(41.795172, -87.618327)",41.795172,-87.618327
+128,30224,Garfield (95th-bound),Garfield,41170,True,True,False,False,False,False,False,False,False,False,"(41.79542, -87.631157)",41.79542,-87.631157
+129,30223,Garfield (Howard-bound),Garfield,41170,True,True,False,False,False,False,False,False,False,False,"(41.79542, -87.631157)",41.79542,-87.631157
+130,30099,Garfield (Harlem-bound),Garfield,40510,True,False,False,True,False,False,False,False,False,False,"(41.795172, -87.618327)",41.795172,-87.618327
+131,30096,Grand/Milwaukee (Forest Pk-bound),Grand,40490,False,False,True,False,False,False,False,False,False,False,"(41.891189, -87.647578)",41.891189,-87.647578
+132,30064,Grand/State (Howard-bound),Grand,40330,True,True,False,False,False,False,False,False,False,False,"(41.891665, -87.628021)",41.891665,-87.628021
+133,30065,Grand/State (95th-bound),Grand,40330,True,True,False,False,False,False,False,False,False,False,"(41.891665, -87.628021)",41.891665,-87.628021
+134,30095,Grand/Milwaukee (O'Hare-bound),Grand,40490,False,False,True,False,False,False,False,False,False,False,"(41.891189, -87.647578)",41.891189,-87.647578
+135,30148,Granville (95th-bound),Granville,40760,True,True,False,False,False,False,False,False,False,False,"(41.993664, -87.659202)",41.993664,-87.659202
+136,30147,Granville (Howard-bound),Granville,40760,True,True,False,False,False,False,False,False,False,False,"(41.993664, -87.659202)",41.993664,-87.659202
+137,30183,Halsted/63rd (Harlem-bound),Halsted,40940,True,False,False,True,False,False,False,False,False,False,"(41.778943, -87.644244)",41.778943,-87.644244
+138,30216,Halsted (Midway-bound),Halsted,41130,True,False,False,False,False,False,False,False,False,True,"(41.84678, -87.648088)",41.84678,-87.648088
+139,30184,Halsted/63rd (Ashland-bound),Halsted,40940,True,False,False,True,False,False,False,False,False,False,"(41.778943, -87.644244)",41.778943,-87.644244
+140,30215,Halsted (Loop-bound),Halsted,41130,True,False,False,False,False,False,False,False,False,True,"(41.84678, -87.648088)",41.84678,-87.648088
+141,30189,Harlem (Forest Pk Branch) (O'Hare-bound),Harlem,40980,False,False,True,False,False,False,False,False,False,False,"(41.87349, -87.806961)",41.87349,-87.806961
+142,30146,Harlem (O'Hare Branch) (Forest Pk-bound),Harlem,40750,True,False,True,False,False,False,False,False,False,False,"(41.98227, -87.8089)",41.98227,-87.8089
+143,30145,Harlem (O'Hare Branch) (O'Hare-bound),Harlem,40750,True,False,True,False,False,False,False,False,False,False,"(41.98227, -87.8089)",41.98227,-87.8089
+144,30190,Harlem (Forest Pk Branch) (Terminal arrival),Harlem,40980,False,False,True,False,False,False,False,False,False,False,"(41.87349, -87.806961)",41.87349,-87.806961
+145,30003,Harlem (63rd-bound),Harlem/Lake,40020,True,False,False,True,False,False,False,False,False,False,"(41.886848, -87.803176)",41.886848,-87.803176
+146,30004,Harlem (Terminal arrival),Harlem/Lake,40020,True,False,False,True,False,False,False,False,False,False,"(41.886848, -87.803176)",41.886848,-87.803176
+147,30165,H.W. Library (Outer Loop),Harold Washington Library-State/Van Buren,40850,True,False,False,False,True,False,False,False,False,False,"(41.876862, -87.628196)",41.876862,-87.628196
+148,30166,H.W. Library (Inner Loop),Harold Washington Library-State/Van Buren,40850,True,False,False,False,False,False,True,False,True,True,"(41.876862, -87.628196)",41.876862,-87.628196
+149,30286,Harrison (95th-bound),Harrison,41490,False,True,False,False,False,False,False,False,False,False,"(41.874039, -87.627479)",41.874039,-87.627479
+150,30285,Harrison (Howard-bound),Harrison,41490,False,True,False,False,False,False,False,False,False,False,"(41.874039, -87.627479)",41.874039,-87.627479
+151,30173,Howard (Terminal arrival),Howard,40900,True,True,False,False,False,False,False,False,False,False,"(42.019063, -87.672892)",42.019063,-87.672892
+152,30176,Howard (Terminal arrival),Howard,40900,True,False,False,False,False,True,True,True,False,False,"(42.019063, -87.672892)",42.019063,-87.672892
+153,30175,"Howard (Linden, Skokie-bound)",Howard,40900,True,False,False,False,False,True,True,True,False,False,"(42.019063, -87.672892)",42.019063,-87.672892
+154,30174,Howard (95th-Bound),Howard,40900,True,True,False,False,False,False,False,False,False,False,"(42.019063, -87.672892)",42.019063,-87.672892
+155,30157,Illinois Medical District (O'Hare-bound),Illinois Medical District,40810,True,False,True,False,False,False,False,False,False,False,"(41.875706, -87.673932)",41.875706,-87.673932
+156,30158,Illinois Medical District (Forest Pk-bound),Illinois Medical District,40810,True,False,True,False,False,False,False,False,False,False,"(41.875706, -87.673932)",41.875706,-87.673932
+157,30059,Indiana (63rd-bound),Indiana,40300,True,False,False,True,False,False,False,False,False,False,"(41.821732, -87.621371)",41.821732,-87.621371
+158,30058,Indiana (Harlem-bound),Indiana,40300,True,False,False,True,False,False,False,False,False,False,"(41.821732, -87.621371)",41.821732,-87.621371
+159,30282,Irving Park (Loop-bound),Irving Park,41460,True,False,False,False,True,False,False,False,False,False,"(41.954521, -87.674868)",41.954521,-87.674868
+160,30107,Irving Park (O'Hare Branch) (O'Hare-bound),Irving Park,40550,False,False,True,False,False,False,False,False,False,False,"(41.952925, -87.729229)",41.952925,-87.729229
+161,30108,Irving Park (O'Hare Branch) (Forest Pk-bound),Irving Park,40550,False,False,True,False,False,False,False,False,False,False,"(41.952925, -87.729229)",41.952925,-87.729229
+162,30281,Irving Park (Kimball-bound),Irving Park,41460,True,False,False,False,True,False,False,False,False,False,"(41.954521, -87.674868)",41.954521,-87.674868
+163,30014,Jackson/Dearborn (O'Hare-bound),Jackson,40070,True,False,True,False,False,False,False,False,False,False,"(41.878183, -87.629296)",41.878183,-87.629296
+164,30110,Jackson/State (95th-bound),Jackson,40560,True,True,False,False,False,False,False,False,False,False,"(41.878153, -87.627596)",41.878153,-87.627596
+165,30109,Jackson/State (Howard-bound),Jackson,40560,True,True,False,False,False,False,False,False,False,False,"(41.878153, -87.627596)",41.878153,-87.627596
+166,30015,Jackson/Dearborn (Forest Pk-bound),Jackson,40070,True,False,True,False,False,False,False,False,False,False,"(41.878183, -87.629296)",41.878183,-87.629296
+167,30227,Jarvis (Howard-bound),Jarvis,41190,False,True,False,False,False,False,False,False,False,False,"(42.015876, -87.669092)",42.015876,-87.669092
+168,30228,Jarvis (95th-bound),Jarvis,41190,False,True,False,False,False,False,False,False,False,False,"(42.015876, -87.669092)",42.015876,-87.669092
+169,30247,Jefferson Park (O'Hare-bound),Jefferson Park,41280,True,False,True,False,False,False,False,False,False,False,"(41.970634, -87.760892)",41.970634,-87.760892
+170,30248,Jefferson Park (Forest Pk-bound),Jefferson Park,41280,True,False,True,False,False,False,False,False,False,False,"(41.970634, -87.760892)",41.970634,-87.760892
+171,30226,Kedzie (Loop-bound),Kedzie,41180,True,False,False,False,True,False,False,False,False,False,"(41.965996, -87.708821)",41.965996,-87.708821
+172,30219,Kedzie (Loop-bound),Kedzie,41150,True,False,False,False,False,False,False,False,False,True,"(41.804236, -87.704406)",41.804236,-87.704406
+173,30220,Kedzie (Midway-bound),Kedzie,41150,True,False,False,False,False,False,False,False,False,True,"(41.804236, -87.704406)",41.804236,-87.704406
+174,30202,Kedzie (54th/Cermak-bound),Kedzie,41040,True,False,False,False,False,False,False,False,True,False,"(41.853964, -87.705408)",41.853964,-87.705408
+175,30201,Kedzie (Loop-bound),Kedzie,41040,True,False,False,False,False,False,False,False,True,False,"(41.853964, -87.705408)",41.853964,-87.705408
+176,30225,Kedzie (Kimball-bound),Kedzie,41180,True,False,False,False,True,False,False,False,False,False,"(41.965996, -87.708821)",41.965996,-87.708821
+177,30207,Kedzie (63rd-bound),Kedzie,41070,True,False,False,True,False,False,False,False,False,False,"(41.884321, -87.706155)",41.884321,-87.706155
+178,30208,Kedzie (Harlem-bound),Kedzie,41070,True,False,False,True,False,False,False,False,False,False,"(41.884321, -87.706155)",41.884321,-87.706155
+179,30049,Kedzie-Homan (Forest Pk-bound),Kedzie-Homan,40250,True,False,True,False,False,False,False,False,False,False,"(41.874341, -87.70604)",41.874341,-87.70604
+180,30048,Kedzie-Homan (O'Hare-bound),Kedzie-Homan,40250,True,False,True,False,False,False,False,False,False,False,"(41.874341, -87.70604)",41.874341,-87.70604
+181,30249,Kimball (Terminal arrival),Kimball,41290,True,False,False,False,True,False,False,False,False,False,"(41.967901, -87.713065)",41.967901,-87.713065
+182,30250,Kimball (Loop-bound),Kimball,41290,True,False,False,False,True,False,False,False,False,False,"(41.967901, -87.713065)",41.967901,-87.713065
+183,30217,King Drive (Cottage Grove-bound),King Drive,41140,True,False,False,True,False,False,False,False,False,False,"(41.78013, -87.615546)",41.78013,-87.615546
+184,30218,King Drive (Harlem-bound),King Drive,41140,True,False,False,True,False,False,False,False,False,False,"(41.78013, -87.615546)",41.78013,-87.615546
+185,30117,Kostner (Loop-bound),Kostner,40600,True,False,False,False,False,False,False,False,True,False,"(41.853751, -87.733258)",41.853751,-87.733258
+186,30118,Kostner (54th/Cermak-bound),Kostner,40600,True,False,False,False,False,False,False,False,True,False,"(41.853751, -87.733258)",41.853751,-87.733258
+187,30290,Lake (95th-bound),Lake,41660,True,True,False,False,False,False,False,False,False,False,"(41.884809, -87.627813)",41.884809,-87.627813
+188,30289,Lake (Howard-bound),Lake,41660,True,True,False,False,False,False,False,False,False,False,"(41.884809, -87.627813)",41.884809,-87.627813
+189,30135,Laramie (63rd-bound),Laramie,40700,True,False,False,True,False,False,False,False,False,False,"(41.887163, -87.754986)",41.887163,-87.754986
+190,30136,Laramie (Harlem-bound),Laramie,40700,True,False,False,True,False,False,False,False,False,False,"(41.887163, -87.754986)",41.887163,-87.754986
+191,30262,LaSalle (Forest Pk-bound),LaSalle,41340,False,False,True,False,False,False,False,False,False,False,"(41.875568, -87.631722)",41.875568,-87.631722
+192,30261,LaSalle (O'Hare-bound),LaSalle,41340,False,False,True,False,False,False,False,False,False,False,"(41.875568, -87.631722)",41.875568,-87.631722
+193,30030,LaSalle/Van Buren (Outer Loop),LaSalle/Van Buren,40160,False,False,False,False,True,False,False,False,False,False,"(41.8768, -87.631739)",41.8768,-87.631739
+194,30031,LaSalle/Van Buren (Inner Loop),LaSalle/Van Buren,40160,False,False,False,False,False,False,True,False,True,True,"(41.8768, -87.631739)",41.8768,-87.631739
+195,30149,Lawrence (Howard-bound),Lawrence,40770,False,True,False,False,False,False,False,False,False,False,"(41.969139, -87.658493)",41.969139,-87.658493
+196,30150,Lawrence (95th-bound),Lawrence,40770,False,True,False,False,False,False,False,False,False,False,"(41.969139, -87.658493)",41.969139,-87.658493
+197,30203,Linden (Linden-bound),Linden,41050,True,False,False,False,False,True,True,False,False,False,"(42.073153, -87.69073)",42.073153,-87.69073
+198,30204,Linden (Howard-Loop-bound),Linden,41050,True,False,False,False,False,True,True,False,False,False,"(42.073153, -87.69073)",42.073153,-87.69073
+199,30197,Logan Square (O'Hare-bound),Logan Square,41020,True,False,True,False,False,False,False,False,False,False,"(41.929728, -87.708541)",41.929728,-87.708541
+200,30198,Logan Square (Forest Pk-bound),Logan Square,41020,True,False,True,False,False,False,False,False,False,False,"(41.929728, -87.708541)",41.929728,-87.708541
+201,30251,Loyola (Howard-bound),Loyola,41300,True,True,False,False,False,False,False,False,False,False,"(42.001073, -87.661061)",42.001073,-87.661061
+202,30252,Loyola (95th-bound),Loyola,41300,True,True,False,False,False,False,False,False,False,False,"(42.001073, -87.661061)",42.001073,-87.661061
+203,30052,Main (Linden-bound),Main,40270,False,False,False,False,False,True,True,False,False,False,"(42.033456, -87.679538)",42.033456,-87.679538
+204,30053,Main (Howard-Loop-bound),Main,40270,False,False,False,False,False,True,True,False,False,False,"(42.033456, -87.679538)",42.033456,-87.679538
+205,30091,Merchandise Mart (Loop-bound),Merchandise Mart,40460,True,False,False,False,True,False,True,False,False,False,"(41.888969, -87.633924)",41.888969,-87.633924
+206,30090,Merchandise Mart (Kimball-Linden-bound),Merchandise Mart,40460,True,False,False,False,True,False,True,False,False,False,"(41.888969, -87.633924)",41.888969,-87.633924
+207,30182,Midway (Arrival),Midway,40930,True,False,False,False,False,False,False,False,False,True,"(41.78661, -87.737875)",41.78661,-87.737875
+208,30181,Midway (Loop-bound),Midway,40930,True,False,False,False,False,False,False,False,False,True,"(41.78661, -87.737875)",41.78661,-87.737875
+209,30153,Monroe (O'Hare-bound),Monroe,40790,False,False,True,False,False,False,False,False,False,False,"(41.880703, -87.629378)",41.880703,-87.629378
+210,30211,Monroe (Howard-bound),Monroe,41090,False,True,False,False,False,False,False,False,False,False,"(41.880745, -87.627696)",41.880745,-87.627696
+211,30212,Monroe (95th-bound),Monroe,41090,False,True,False,False,False,False,False,False,False,False,"(41.880745, -87.627696)",41.880745,-87.627696
+212,30154,Monroe (Forest Pk-bound),Monroe,40790,False,False,True,False,False,False,False,False,False,False,"(41.880703, -87.629378)",41.880703,-87.629378
+213,30260,Montrose (Forest Pk-bound),Montrose,41330,False,False,True,False,False,False,False,False,False,False,"(41.961539, -87.743574)",41.961539,-87.743574
+214,30259,Montrose (O'Hare-bound),Montrose,41330,False,False,True,False,False,False,False,False,False,False,"(41.961539, -87.743574)",41.961539,-87.743574
+215,30287,Montrose (Kimball-bound),Montrose,41500,True,False,False,False,True,False,False,False,False,False,"(41.961756, -87.675047)",41.961756,-87.675047
+216,30288,Montrose (Loop-bound),Montrose,41500,True,False,False,False,True,False,False,False,False,False,"(41.961756, -87.675047)",41.961756,-87.675047
+217,30296,Morgan (Harlem-54th/Cermak-bound),Morgan,41510,True,False,False,True,False,False,False,False,True,False,"(41.885586, -87.652193)",41.885586,-87.652193
+218,30295,Morgan (Loop-63rd-bound),Morgan,41510,True,False,False,True,False,False,False,False,True,False,"(41.885586, -87.652193)",41.885586,-87.652193
+219,30020,Morse (Howard-bound),Morse,40100,False,True,False,False,False,False,False,False,False,False,"(42.008362, -87.665909)",42.008362,-87.665909
+220,30021,Morse (95th-bound),Morse,40100,False,True,False,False,False,False,False,False,False,False,"(42.008362, -87.665909)",42.008362,-87.665909
+221,30125,North/Clybourn (Howard-bound),North/Clybourn,40650,False,True,False,False,False,False,False,False,False,False,"(41.910655, -87.649177)",41.910655,-87.649177
+222,30126,North/Clybourn (95th-bound),North/Clybourn,40650,False,True,False,False,False,False,False,False,False,False,"(41.910655, -87.649177)",41.910655,-87.649177
+223,30079,Noyes (Howard-Loop-bound),Noyes,40400,False,False,False,False,False,True,True,False,False,False,"(42.058282, -87.683337)",42.058282,-87.683337
+224,30078,Noyes (Linden-bound),Noyes,40400,False,False,False,False,False,True,True,False,False,False,"(42.058282, -87.683337)",42.058282,-87.683337
+225,30263,Oak Park (63rd-bound),Oak Park,41350,False,False,False,True,False,False,False,False,False,False,"(41.886988, -87.793783)",41.886988,-87.793783
+226,30035,Oak Park (Forest Pk-bound),Oak Park,40180,False,False,True,False,False,False,False,False,False,False,"(41.872108, -87.791602)",41.872108,-87.791602
+227,30034,Oak Park (O'Hare-bound),Oak Park,40180,False,False,True,False,False,False,False,False,False,False,"(41.872108, -87.791602)",41.872108,-87.791602
+228,30264,Oak Park (Harlem-bound),Oak Park,41350,False,False,False,True,False,False,False,False,False,False,"(41.886988, -87.793783)",41.886988,-87.793783
+229,30298,Oakton-Skokie (Howard-bound),Oakton-Skokie,41680,True,False,False,False,False,False,False,True,False,False,"(42.02624348, -87.74722084)",42.02624348,-87.74722084
+230,30297,Oakton-Skokie (Dempster-Skokie-bound),Oakton-Skokie,41680,True,False,False,False,False,False,False,True,False,False,"(42.02624348, -87.74722084)",42.02624348,-87.74722084
+231,30172,O'Hare (Forest Pk-bound),O'Hare,40890,True,False,True,False,False,False,False,False,False,False,"(41.97766526, -87.90422307)",41.97766526,-87.90422307
+232,30171,O'Hare (Terminal Arrival),O'Hare,40890,True,False,True,False,False,False,False,False,False,False,"(41.97766526, -87.90422307)",41.97766526,-87.90422307
+233,30254,Paulina (Loop-bound),Paulina,41310,True,False,False,False,True,False,False,False,False,False,"(41.943623, -87.670907)",41.943623,-87.670907
+234,30253,Paulina (Kimball-bound),Paulina,41310,True,False,False,False,True,False,False,False,False,False,"(41.943623, -87.670907)",41.943623,-87.670907
+235,30200,Polk (54th/Cermak-bound),Polk,41030,True,False,False,False,False,False,False,False,True,False,"(41.871551, -87.66953)",41.871551,-87.66953
+236,30199,Polk (Loop-bound),Polk,41030,True,False,False,False,False,False,False,False,True,False,"(41.871551, -87.66953)",41.871551,-87.66953
+237,30028,Pulaski (Loop-bound),Pulaski,40150,True,False,False,False,False,False,False,False,True,False,"(41.853732, -87.724311)",41.853732,-87.724311
+238,30185,Pulaski (Loop-bound),Pulaski,40960,True,False,False,False,False,False,False,False,False,True,"(41.799756, -87.724493)",41.799756,-87.724493
+239,30186,Pulaski (Midway-bound),Pulaski,40960,True,False,False,False,False,False,False,False,False,True,"(41.799756, -87.724493)",41.799756,-87.724493
+240,30029,Pulaski (54th/Cermak-bound),Pulaski,40150,True,False,False,False,False,False,False,False,True,False,"(41.853732, -87.724311)",41.853732,-87.724311
+241,30180,Pulaski (Forest Pk-bound),Pulaski,40920,False,False,True,False,False,False,False,False,False,False,"(41.873797, -87.725663)",41.873797,-87.725663
+242,30179,Pulaski (O'Hare-bound),Pulaski,40920,False,False,True,False,False,False,False,False,False,False,"(41.873797, -87.725663)",41.873797,-87.725663
+243,30005,Pulaski (63rd-bound),Pulaski,40030,True,False,False,True,False,False,False,False,False,False,"(41.885412, -87.725404)",41.885412,-87.725404
+244,30006,Pulaski (Harlem-bound),Pulaski,40030,True,False,False,True,False,False,False,False,False,False,"(41.885412, -87.725404)",41.885412,-87.725404
+245,30007,Quincy/Wells (Inner Loop),Quincy/Wells,40040,False,False,False,False,False,False,True,False,True,True,"(41.878723, -87.63374)",41.878723,-87.63374
+246,30008,Quincy/Wells (Outer Loop),Quincy/Wells,40040,False,False,False,False,True,False,False,False,False,False,"(41.878723, -87.63374)",41.878723,-87.63374
+247,30093,Racine (Forest Pk-bound),Racine,40470,False,False,True,False,False,False,False,False,False,False,"(41.87592, -87.659458)",41.87592,-87.659458
+248,30092,Racine (O'Hare-bound),Racine,40470,False,False,True,False,False,False,False,False,False,False,"(41.87592, -87.659458)",41.87592,-87.659458
+249,30120,Ridgeland (Harlem-bound),Ridgeland,40610,False,False,False,True,False,False,False,False,False,False,"(41.887159, -87.783661)",41.887159,-87.783661
+250,30119,Ridgeland (63rd-bound),Ridgeland,40610,False,False,False,True,False,False,False,False,False,False,"(41.887159, -87.783661)",41.887159,-87.783661
+251,30196,Rockwell (Loop-bound),Rockwell,41010,True,False,False,False,True,False,False,False,False,False,"(41.966115, -87.6941)",41.966115,-87.6941
+252,30195,Rockwell (Kimball-bound),Rockwell,41010,True,False,False,False,True,False,False,False,False,False,"(41.966115, -87.6941)",41.966115,-87.6941
+253,30081,Roosevelt (Midway-63rd-bound),Roosevelt,41400,True,False,False,True,False,False,False,False,False,True,"(41.867405, -87.62659)",41.867405,-87.62659
+254,30080,Roosevelt (Loop-Harlem-bound),Roosevelt,41400,True,False,False,True,False,False,False,False,False,True,"(41.867405, -87.62659)",41.867405,-87.62659
+255,30269,Roosevelt (Howard-bound),Roosevelt,41400,True,True,False,False,False,False,False,False,False,False,"(41.867368, -87.627402)",41.867368,-87.627402
+256,30270,Roosevelt (95th-bound),Roosevelt,41400,True,True,False,False,False,False,False,False,False,False,"(41.867368, -87.627402)",41.867368,-87.627402
+257,30159,Rosemont (O'Hare-bound),Rosemont,40820,True,False,True,False,False,False,False,False,False,False,"(41.983507, -87.859388)",41.983507,-87.859388
+258,30160,Rosemont (Forest Pk-bound),Rosemont,40820,True,False,True,False,False,False,False,False,False,False,"(41.983507, -87.859388)",41.983507,-87.859388
+259,30155,Sedgwick (Kimball-Linden-bound),Sedgwick,40800,True,False,False,False,True,False,True,False,False,False,"(41.910409, -87.639302)",41.910409,-87.639302
+260,30156,Sedgwick (Loop-bound),Sedgwick,40800,True,False,False,False,True,False,True,False,False,False,"(41.910409, -87.639302)",41.910409,-87.639302
+261,30017,Sheridan (95th-bound),Sheridan,40080,False,True,False,False,False,False,False,False,False,False,"(41.953775, -87.654929)",41.953775,-87.654929
+262,30016,Sheridan (Howard-bound),Sheridan,40080,False,True,False,False,False,False,False,False,False,False,"(41.953775, -87.654929)",41.953775,-87.654929
+263,30293,Sheridan (Howard-Linden-bound),Sheridan,40080,False,False,False,False,False,False,False,False,False,False,"(41.953775, -87.654929)",41.953775,-87.654929
+264,30294,Sheridan (Loop-bound),Sheridan,40080,False,False,False,False,False,False,False,False,False,False,"(41.953775, -87.654929)",41.953775,-87.654929
+265,30163,South Blvd (Linden-bound),South Boulevard,40840,False,False,False,False,False,True,True,False,False,False,"(42.027612, -87.678329)",42.027612,-87.678329
+266,30164,South Blvd (Howard-Loop-bound),South Boulevard,40840,False,False,False,False,False,True,True,False,False,False,"(42.027612, -87.678329)",42.027612,-87.678329
+267,30070,Southport (Kimball-bound),Southport,40360,True,False,False,False,True,False,False,False,False,False,"(41.943744, -87.663619)",41.943744,-87.663619
+268,30071,Southport (Loop-bound),Southport,40360,True,False,False,False,True,False,False,False,False,False,"(41.943744, -87.663619)",41.943744,-87.663619
+269,30036,Sox-35th (Howard-bound),Sox-35th,40190,True,True,False,False,False,False,False,False,False,False,"(41.831191, -87.630636)",41.831191,-87.630636
+270,30037,Sox-35th (95th-bound),Sox-35th,40190,True,True,False,False,False,False,False,False,False,False,"(41.831191, -87.630636)",41.831191,-87.630636
+271,30051,State/Lake (Outer Loop),State/Lake,40260,False,False,False,True,True,False,False,False,False,False,"(41.88574, -87.627835)",41.88574,-87.627835
+272,30050,State/Lake (Inner Loop),State/Lake,40260,False,False,False,True,False,False,True,False,True,True,"(41.88574, -87.627835)",41.88574,-87.627835
+273,30170,Thorndale (95th-bound),Thorndale,40880,False,True,False,False,False,False,False,False,False,False,"(41.990259, -87.659076)",41.990259,-87.659076
+274,30169,Thorndale (Howard-bound),Thorndale,40880,False,True,False,False,False,False,False,False,False,False,"(41.990259, -87.659076)",41.990259,-87.659076
+275,30069,UIC-Halsted (Forest Pk-bound),UIC-Halsted,40350,True,False,True,False,False,False,False,False,False,False,"(41.875474, -87.649707)",41.875474,-87.649707
+276,30068,UIC-Halsted (O'Hare-bound),UIC-Halsted,40350,True,False,True,False,False,False,False,False,False,False,"(41.875474, -87.649707)",41.875474,-87.649707
+277,30073,Washington (Forest Pk-bound),Washington,40370,False,False,True,False,False,False,False,False,False,False,"(41.883164, -87.62944)",41.883164,-87.62944
+278,30072,Washington (O'Hare-bound),Washington,40370,False,False,True,False,False,False,False,False,False,False,"(41.883164, -87.62944)",41.883164,-87.62944
+279,30383,Washington/Wabash (Outer Loop),Washington/Wabash,41700,True,False,False,True,True,False,False,False,False,False,"(41.88322, -87.626189)",41.88322,-87.626189
+280,30384,Washington/Wabash (Inner Loop),Washington/Wabash,41700,True,False,False,True,False,False,True,False,True,True,"(41.88322, -87.626189)",41.88322,-87.626189
+281,30141,Washington/Wells (Inner Loop),Washington/Wells,40730,True,False,False,False,False,False,True,False,True,True,"(41.882695, -87.63378)",41.882695,-87.63378
+282,30142,Washington/Wells (Outer Loop),Washington/Wells,40730,True,False,False,False,True,False,False,False,False,False,"(41.882695, -87.63378)",41.882695,-87.63378
+283,30231,Wellington (Kimball-Linden-bound),Wellington,41210,True,False,False,False,True,False,True,False,False,False,"(41.936033, -87.653266)",41.936033,-87.653266
+284,30232,Wellington (Loop-bound),Wellington,41210,True,False,False,False,True,False,True,False,False,False,"(41.936033, -87.653266)",41.936033,-87.653266
+285,30129,Western (O'Hare Branch) (O'Hare-bound),Western,40670,True,False,True,False,False,False,False,False,False,False,"(41.916157, -87.687364)",41.916157,-87.687364
+286,30284,Western (Loop-bound),Western,41480,True,False,False,False,True,False,False,False,False,False,"(41.966163, -87.688502)",41.966163,-87.688502
+287,30283,Western (Kimball-bound),Western,41480,True,False,False,False,True,False,False,False,False,False,"(41.966163, -87.688502)",41.966163,-87.688502
+288,30143,Western (Loop-bound),Western,40740,True,False,False,False,False,False,False,False,True,False,"(41.854225, -87.685129)",41.854225,-87.685129
+289,30144,Western (54th/Cermak-bound),Western,40740,True,False,False,False,False,False,False,False,True,False,"(41.854225, -87.685129)",41.854225,-87.685129
+290,30061,Western (Midway-bound),Western,40310,True,False,False,False,False,False,False,False,False,True,"(41.804546, -87.684019)",41.804546,-87.684019
+291,30060,Western (Loop-bound),Western,40310,True,False,False,False,False,False,False,False,False,True,"(41.804546, -87.684019)",41.804546,-87.684019
+292,30130,Western (O'Hare Branch) (Forest Pk-bound),Western,40670,True,False,True,False,False,False,False,False,False,False,"(41.916157, -87.687364)",41.916157,-87.687364
+293,30042,Western (Forest Pk Branch) (O'Hare-bound),Western,40220,False,False,True,False,False,False,False,False,False,False,"(41.875478, -87.688436)",41.875478,-87.688436
+294,30043,Western (Forest Pk Branch) (Forest Pk-bound),Western,40220,False,False,True,False,False,False,False,False,False,False,"(41.875478, -87.688436)",41.875478,-87.688436
+295,30106,Wilson (95th-bound),Wilson,40540,True,True,False,False,False,False,False,False,False,False,"(41.964273, -87.657588)",41.964273,-87.657588
+296,30105,Wilson (Howard-bound),Wilson,40540,True,True,False,False,False,False,False,False,False,False,"(41.964273, -87.657588)",41.964273,-87.657588
+297,30385,Wilson (Loop-bound),Wilson,40540,True,False,False,False,False,False,True,False,False,False,"(41.964273, -87.657588)",41.964273,-87.657588
+298,30386,Wilson (Linden-bound),Wilson,40540,True,False,False,False,False,False,True,False,False,False,"(41.964273, -87.657588)",41.964273,-87.657588
+299,30033,Ashland (Harlem-54th/Cermak-bound),Ashland,40170,True,False,False,True,False,False,False,False,True,False,"(41.885269, -87.666969)",41.885269,-87.666969
